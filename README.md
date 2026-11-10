@@ -1,6 +1,6 @@
 # Awesome-Centralized-Selenium-Grid-Hub
 
-# Top Centralized Selenium Grid Hub Ecosystem
+## Top Centralized Selenium Grid Hub Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Remote Browser Orchestration, Parallel Test Execution & Grid Infrastructure Management*  
