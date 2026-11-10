@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Selenium / Cyber Neon Gradients -->
+    <linearGradient id="primary-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D2FF" />
+      <stop offset="50%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+
+    <linearGradient id="hub-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <linearGradient id="accent-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <!-- Filters for Glow Effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="node-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f2937" stroke-width="0.8" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulse-pulse {
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.08); }
+    }
+    @keyframes flow-line {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes orbit-rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes float-node {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    .orb-1 {
+      animation: pulse-pulse 8s ease-in-out infinite alternate;
+      transform-origin: 200px 100px;
+    }
+    .orb-2 {
+      animation: pulse-pulse 10s ease-in-out infinite alternate;
+      transform-origin: 1000px 300px;
+    }
+    .node-pulse-1 {
+      animation: float-node 4s ease-in-out infinite;
+    }
+    .node-pulse-2 {
+      animation: float-node 5s ease-in-out infinite 1s;
+    }
+    .node-pulse-3 {
+      animation: float-node 4.5s ease-in-out infinite 0.5s;
+    }
+    .data-stream {
+      stroke-dasharray: 8 6;
+      animation: flow-line 2.5s linear infinite;
+    }
+    .data-stream-rev {
+      stroke-dasharray: 8 6;
+      animation: flow-line 3s linear infinite reverse;
+    }
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .body-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+    }
+  </style>
+
+  <!-- Deep Tech Background -->
+  <rect width="1200" height="400" fill="url(#bg-grad)" />
+
+  <!-- Animated Glowing Ambient Orbs (Background layer) -->
+  <circle class="orb-1" cx="250" cy="120" r="140" fill="#00D2FF" opacity="0.15" filter="url(#glow)" />
+  <circle class="orb-2" cx="950" cy="260" r="160" fill="#8B5CF6" opacity="0.15" filter="url(#glow)" />
+  <circle class="orb-1" cx="600" cy="350" r="120" fill="#10B981" opacity="0.12" filter="url(#glow)" />
+
+  <!-- Grid Blueprint Overlay -->
+  <rect width="1200" height="400" fill="url(#grid)" />
+
+  <!-- Dynamic Network Architecture Graphics (Behind Title, Bottom-Half Accent) -->
+  <g opacity="0.55">
+    <!-- Hub Connections -->
+    <path class="data-stream" d="M 600 290 L 350 250" fill="none" stroke="#00D2FF" stroke-width="2" />
+    <path class="data-stream-rev" d="M 600 290 L 850 250" fill="none" stroke="#10B981" stroke-width="2" />
+    <path class="data-stream" d="M 600 290 L 220 340" fill="none" stroke="#3B82F6" stroke-width="1.8" />
+    <path class="data-stream-rev" d="M 600 290 L 980 340" fill="none" stroke="#8B5CF6" stroke-width="1.8" />
+    <path class="data-stream" d="M 600 290 L 600 375" fill="none" stroke="#EC4899" stroke-width="2" />
+
+    <!-- Central Hub Node -->
+    <circle cx="600" cy="290" r="32" fill="#0f172a" stroke="#00D2FF" stroke-width="3" filter="url(#node-glow)"/>
+    <circle cx="600" cy="290" r="14" fill="#00D2FF" opacity="0.8"/>
+
+    <!-- Peripheral Nodes -->
+    <g class="node-pulse-1">
+      <circle cx="350" cy="250" r="22" fill="#0f172a" stroke="#3B82F6" stroke-width="2" />
+      <circle cx="350" cy="250" r="8" fill="#3B82F6" />
+      <text x="350" y="285" fill="#94A3B8" font-size="11" font-family="sans-serif" text-anchor="middle">Chrome Node</text>
+    </g>
+
+    <g class="node-pulse-2">
+      <circle cx="850" cy="250" r="22" fill="#0f172a" stroke="#10B981" stroke-width="2" />
+      <circle cx="850" cy="250" r="8" fill="#10B981" />
+      <text x="850" y="285" fill="#94A3B8" font-size="11" font-family="sans-serif" text-anchor="middle">Firefox Node</text>
+    </g>
+
+    <g class="node-pulse-3">
+      <circle cx="220" cy="340" r="18" fill="#0f172a" stroke="#00D2FF" stroke-width="2" />
+      <circle cx="220" cy="340" r="6" fill="#00D2FF" />
+      <text x="220" y="370" fill="#94A3B8" font-size="11" font-family="sans-serif" text-anchor="middle">Edge Node</text>
+    </g>
+
+    <g class="node-pulse-1">
+      <circle cx="980" cy="340" r="18" fill="#0f172a" stroke="#8B5CF6" stroke-width="2" />
+      <circle cx="980" cy="340" r="6" fill="#8B5CF6" />
+      <text x="980" y="370" fill="#94A3B8" font-size="11" font-family="sans-serif" text-anchor="middle">Safari Node</text>
+    </g>
+
+    <g class="node-pulse-2">
+      <circle cx="600" cy="375" r="14" fill="#0f172a" stroke="#EC4899" stroke-width="2" />
+      <circle cx="600" cy="375" r="5" fill="#EC4899" />
+    </g>
+  </g>
+
+  <!-- Foreground Content: Pill Badge -->
+  <g transform="translate(600, 52)">
+    <rect x="-140" y="-14" width="280" height="28" rx="14" fill="#1e293b" stroke="#38BDF8" stroke-width="1.2" opacity="0.95" />
+    <circle cx="-118" cy="0" r="5" fill="#10B981" />
+    <text class="body-text" x="0" y="4" fill="#38BDF8" font-size="12" font-weight="600" letter-spacing="1" text-anchor="middle">
+      REMOTE BROWSER ORCHESTRATION
+    </text>
+  </g>
+
+  <!-- Foreground Content: Main Title -->
+  <!-- Note: Foreground title is firmly positioned above nodes and cannot be obscured -->
+  <text class="title-text" x="600" y="118" text-anchor="middle" font-size="38" fill="url(#primary-glow)">
+    Awesome Centralized Selenium Grid Hub
+  </text>
+
+  <!-- Foreground Content: Subtitle -->
+  <text class="body-text" x="600" y="154" text-anchor="middle" font-size="17" fill="#E2E8F0" font-weight="500">
+    Curated Hub Architecture, Cloud Test Grids &amp; Containerized Browser Clusters
+  </text>
+
+  <!-- Tech Stack Pills -->
+  <g transform="translate(600, 195)">
+    <!-- Pill 1: Selenium Grid 4 -->
+    <rect x="-310" y="-12" width="135" height="25" rx="12.5" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text class="body-text" x="-242" y="5" fill="#CBD5E1" font-size="11" text-anchor="middle">⚡ Selenium Grid 4</text>
+
+    <!-- Pill 2: SaaS Clouds -->
+    <rect x="-160" y="-12" width="140" height="25" rx="12.5" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text class="body-text" x="-90" y="5" fill="#CBD5E1" font-size="11" text-anchor="middle">☁️ SaaS Test Clouds</text>
+
+    <!-- Pill 3: Docker & K8s -->
+    <rect x="-5" y="-12" width="150" height="25" rx="12.5" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text class="body-text" x="70" y="5" fill="#CBD5E1" font-size="11" text-anchor="middle">🐳 Docker &amp; Kubernetes</text>
+
+    <!-- Pill 4: Parallel Scale -->
+    <rect x="160" y="-12" width="150" height="25" rx="12.5" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text class="body-text" x="235" y="5" fill="#CBD5E1" font-size="11" text-anchor="middle">🚀 High Concurrency</text>
+  </g>
+</svg>

@@ -1,89 +1,139 @@
-# Awesome-Centralized-Selenium-Grid-Hub
+<div align="center">
 
-## Top Centralized Selenium Grid Hub Ecosystem
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Centralized Selenium Grid Hub Banner" width="100%" />
+</p>
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on Remote Browser Orchestration, Parallel Test Execution & Grid Infrastructure Management*  
-**Last updated: March 2026**
+# 🌐 Awesome Centralized Selenium Grid Hub ⚡
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Centralized Selenium Grid Hub**. These tools provide a single endpoint for routing WebDriver sessions to remote browsers—enabling parallel test execution, cross-browser coverage, and centralized management of browser infrastructure without maintaining physical device labs or local grid nodes.
+[![Awesome](https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github)](https://github.com/ishandutta2007/Awesome-Awesome-Awesome)<a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+[![Curated List](https://img.shields.io/badge/Curated-Awesome%20List-success.svg?style=flat-square)](https://github.com/ishandutta2007/Awesome-Centralized-Selenium-Grid-Hub)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/ishandutta2007/Awesome-Centralized-Selenium-Grid-Hub/blob/main/README.md#how-to-contribute)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
-**Examples** include BrowserStack Hub, Selenium Grid Hub, Moon by Aerokube, Selenoid (archived), Zalenium (archived), Gridlastic, Sauce Labs Hub, LambdaTest Grid Hub, TestingBot Hub, and OpenSTF (legacy) (the category leaders).
+**Curated Directory of Cloud SaaS Platforms & Open-Source Infrastructure for Centralized Selenium Grid Hubs**  
+*Comprehensive guide for Remote WebDriver Routing, Cross-Browser Testing, Parallel Execution & Distributed Containerized Nodes*  
+📅 **Last updated: March 2026**
 
-**Open-source emphasis**: This section highlights every major active project for self-hosted Selenium grid hubs, containerized browser orchestration, and Kubernetes-native grid alternatives—ideal for QA engineers, platform teams, and organizations seeking transparent, vendor-neutral test infrastructure without per-session cloud pricing.
-
-Contributions welcome! Open an PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-- **[BrowserStack Hub](https://www.browserstack.com/)**  
-  Cloud Selenium grid with access to 3,000+ real browsers and devices; point existing WebDriver tests at the BrowserStack hub endpoint with access credentials, no infrastructure to manage. Supports parallel test execution, local testing tunnels, and video/screenshot capture.
-
-- **[Sauce Labs Hub](https://saucelabs.com/)**  
-  Enterprise-grade Selenium cloud supporting Selenium, Playwright (via CDP), Cypress, and mobile testing. Playwright connections use Chrome DevTools Protocol over the Selenium Grid endpoint, with limitations including Chrome/Edge-only support and headed-mode requirement for video capture [citation:6]. Data centers in US and EU with compliance certifications.
-
-- **[LambdaTest Grid Hub](https://www.lambdatest.com/)**  
-  Selenium automation grid with 3,000+ browser and OS combinations; Jenkins plugin available for CI integration, including freestyle and pipeline job support, LambdaTest Tunnel for locally hosted applications, and test result viewing within Jenkins [citation:7].
-
-- **[TestingBot Hub](https://testingbot.com/)**  
-  Selenium cloud with 6,100+ real desktop browsers and physical iOS/Android devices. Change the WebDriver endpoint to `https://hub.testingbot.com/wd/hub` and pass credentials via `tb:options`; supports parallel execution, live video streaming, screenshots, and browser logs [citation:8].
-
-- **[Gridlastic](https://www.gridlastic.com/)**  
-  Auto-scaling Selenium grid on AWS with spot instance support for cost reduction. Grid hub runs 24/7; nodes auto-launch based on demand and terminate according to a configurable schedule. Gridlastic Connect provides encrypted tunnels for testing behind firewalls, and a pre-launch nodes API reduces startup latency [citation:15].
-
-- **[Moon by Aerokube (Cloud)](https://aerokube.com/moon/)**  
-  Kubernetes-native browser automation solution supporting Selenium, Playwright, Puppeteer, and Cypress in a single cluster. Pricing at $5 per parallel session per month; free tier supports up to 3 concurrent users with basic browser pools [citation:3][citation:12]. Enterprise adds RBAC, audit logging, SSO, priority queues, and multi-cluster scheduling.
-
-- **[OpenSTF Hub (Legacy)](https://openstf.io/)**  
-  Smartphone Test Farm for physical Android device labs with browser-based remote control, screen mirroring, shell access, app install, and REST API. The original repository went quiet around 2020; community continuation exists as DeviceFarmer/stf, but the stack carries legacy dependencies (RethinkDB, per-ABI native binaries) that complicate modern deployments [citation:9]. Best evaluated only if you already run STF and need a migration path.
-
-- **[Zalenium (Archived)](https://opensource.zalando.com/zalenium/)**  
-  Docker-based Selenium Grid with video recording, live preview, and dashboard. Built by Zalando to eliminate in-house grid maintenance; archived and no longer actively maintained. LambdaTest integration documentation still exists for teams extending Zalenium to cloud browsers [citation:4].
-
-## Open-Source GitHub Projects
-
-- **[Selenium Grid 4 (SeleniumHQ)](https://github.com/SeleniumHQ/selenium)**  
-  The reference open-source implementation of the hub-and-node architecture. Grid 4 supports distributed execution with a hub (router, distributor, session map) and nodes registering browser capabilities; relay feature enables proxying Appium requests to Appium server instances [citation:1]. Actively maintained, Apache 2.0 licensed, and the foundation for most commercial and open-source alternatives.
-
-- **[Moon by Aerokube (Self-Hosted)](https://github.com/aerokube/moon)**  
-  Kubernetes-native browser automation platform supporting Selenium, Playwright, Puppeteer, and Cypress. Deploys via Helm with official Chrome, Firefox, and Edge images. Benchmarks show ~3s startup per session (K8s pod scheduling), ~250MB memory per browser, and 30+ max sessions on a 4-core host when cluster-scaled [citation:3]. Free tier available; paid adds RBAC, audit logging, SSO, and priority queues.
-
-- **[WebSummoner (Selenoid Successor)](https://github.com/WebSummoner/websummoner)**  
-  Go-based Selenium hub that launches browsers in ephemeral Docker containers per session; positioned as a maintained successor to Selenoid (archived December 2024). Apache 2.0 licensed, ~10MB binary with no Java dependency. Features video recording, live browser screen/logs, centralized logging, and backward compatibility with Selenoid client APIs including `selenoid:options` capability prefix and `/aerokube/...` proxy paths [citation:10].
-
-- **[Selenoid (Archived)](https://github.com/aerokube/selenoid)**  
-  Go-based Selenium hub using Docker containers for browsers; the project that popularized the "browser-in-container-per-session" model. Archived December 17, 2024, and no longer maintained [citation:13]. Benchmarks from its active period show ~2s session startup, ~300MB per browser, and 15–20 parallel sessions on a 4-core/16GB host [citation:3]. Existing deployments should evaluate WebSummoner or Moon as migration targets.
-
-### Additional Strong Open-Source Options
-
-- **[Selenium Grid on Railway (Template)](https://railway.com/deploy/selenium-grid-446-or-hub-chromium-and-fi)** — Deployable Grid 4 template with hub + Chromium/Firefox nodes, router basic auth, and pinned browser versions (Chromium 150, Firefox 152) for reproducible test runs [citation:11].
-- **Community Selenium Grid Docker Compose stacks** — Many organizations maintain custom compose files for Grid 4 with browser-specific nodes and monitoring sidecars.
-- **[Appium Grid Relay](https://appium.io/docs/en/3.1/guides/grid/)** — Official Appium guide for connecting Appium servers to Selenium Grid 4 via relay configuration, enabling mobile browser and native app testing through the same hub [citation:1].
-
-**Frameworks for building custom systems**: Combine **Selenium Grid 4** for standards-compliant WebDriver routing, **WebSummoner** for Docker-native ephemeral browser sessions, and **Moon** for Kubernetes-scaled Playwright/Cypress execution—or deploy the **Railway template** for a pre-configured Grid 4 hub with authentication.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Selenium grid hubs, whether self-hosted or cloud, execute arbitrary browser automation commands; ensure proper authentication (basic auth at minimum), network isolation, and session cleanup to prevent resource exhaustion or unauthorized use.
-- Self-hosted grid solutions require capacity planning, browser image updates, and monitoring; archived projects (Selenoid, Zalenium, OpenSTF) should be evaluated for migration rather than new deployments.
+</div>
 
 ---
 
-**Made for QA engineers, test automation architects, platform teams, and developers building scalable browser test infrastructure.**  
-Let's make Selenium grid management more open, efficient, and maintainable.
+## 🧭 Overview & Architecture
+
+A **Centralized Selenium Grid Hub** acts as the single routing endpoint for automated testing frameworks (Selenium WebDriver, Playwright via CDP, Puppeteer, Cypress, Appium). By abstracting browser execution away from local machines and CI runners, a centralized hub orchestrates test sessions across isolated desktop browsers (Chrome, Firefox, Safari, Edge) and real or virtual mobile devices.
+
+Whether you run on-demand cloud infrastructure or manage self-hosted containerized nodes via Docker and Kubernetes, centralized hubs solve key bottlenecks:
+- 🚀 **High Concurrency & Parallel Execution**: Reduce test suite execution times from hours to minutes.
+- 🌐 **Cross-Browser & Cross-OS Matrix Testing**: Validate web applications against diverse browser versions, OS flavours, and display resolutions.
+- 🔒 **Unified Ingress & Secure Tunnels**: Standardize authentication, role-based access control (RBAC), and encrypted local-tunnel connections to private staging environments.
+- 📦 **Resource Efficiency & Ephemeral Containers**: Eliminate dirty browser state by dynamically provisioning and destroying isolated browser containers per test session.
+
+---
+
+## 📊 Sector Overview & Market Dynamics
+
+> 💡 **Market Size & Landscape Concentration**: The global automated software testing market is valued at approximately **$24.2 Billion to $28.5 Billion** (with dedicated cloud cross-browser testing platforms accounting for **~$2.8 Billion** and expanding at ~11–14% CAGR). The commercial SaaS sector is **moderately concentrated** around top-tier market leaders—most notably BrowserStack, Sauce Labs, and LambdaTest—which collectively capture majority enterprise market share through global real-device labs and compliance certifications. However, a thriving and fragmented **open-source ecosystem** (powered by Selenium Grid 4, Moon, Docker-Selenium, and headless browser clusters) offers viable self-hosted alternatives for cost-conscious, security-strict engineering teams.
+
+---
+
+## 📑 Table of Contents
+
+- [🧭 Overview & Architecture](#-overview--architecture)
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS / Hosted Testing Clouds](#️-saas--hosted-testing-clouds)
+- [💻 Open-Source Hub Projects & Infrastructure](#-open-source-hub-projects--infrastructure)
+- [🛠️ Architectural Comparison: SaaS vs. Self-Hosted](#️-architectural-comparison-saas-vs-self-hosted)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [📈 Star History](#-star-history)
+- [⚠️ Disclaimer](#️-disclaimer)
+
+---
+
+## ☁️ SaaS / Hosted Testing Clouds
+
+The following hosted cloud platforms provide managed Selenium Grid Hub endpoints (`/wd/hub`) with autoscaling infrastructure, pre-configured real/virtual browsers, video logging, and debugging dashboards.
+
+> [!NOTE]
+> Platforms are sorted in descending order by estimated company scale (corporate valuation / annual revenue).
+
+| Provider | Scale (Valuation / Revenue) | Starting Price (Automation) | Free Tier / Trial Limits | Key Capabilities & Architecture |
+| :--- | :--- | :--- | :--- | :--- |
+| **[BrowserStack](https://www.browserstack.com/)** | **~$4.0B Valuation** (~$230M ARR) | **$59/mo** (Chrome Automate, 1 parallel session) / **$99/mo** (Desktop Automate, billed annually) | **Free Trial**: 60–100 automated test minutes; 100 app automation minutes | 3,000+ real desktop browsers & mobile devices. Provides BrowserStack Local encrypted tunnel, parallel execution, and automated session video/log recording. |
+| **[Sauce Labs](https://saucelabs.com/)** | **~$613M Valuation** (~$92M ARR) | **$149/mo** (Virtual Device Cloud, billed annually) / Live testing from $39/mo | **28-Day Free Trial**: 60 total automated & live test minutes, up to 3 parallel VMs, 50 AI queries | Enterprise-grade grid supporting Selenium, Playwright (CDP relay), Cypress, and real devices across US and EU data centers. Includes Sauce Connect tunnel and Backtrace error monitoring. |
+| **[LambdaTest](https://www.lambdatest.com/)** | **~$400M Valuation** (~$21M+ Revenue) | **$79/mo** (Web Automation, 1 parallel test, billed annually) | **Free Forever Plan**: 100 lifetime automation minutes, 1 concurrent session, limited browser access (plus 6-min/session live test limits) | High-speed cloud Selenium Grid and HyperExecute smart test orchestration with 3,000+ browser combinations, Jenkins integration, and LambdaTest Tunnel for local web assets. |
+| **[TestingBot](https://testingbot.com/)** | **~$1M–$10M Small Enterprise** (~$150K ARR) | **$50/mo** (Automated Testing, 1 parallel test, 1,000 automated mins/mo) | **14-Day Free Trial**: 60 total minutes of testing, capped at 5 minutes per continuous session (no credit card required) | Scalable Selenium Grid with 6,100+ browser/OS/device combinations. Simple migration via `https://hub.testingbot.com/wd/hub`, video recording, live screencasts, and REST APIs. |
+| **[Moon Cloud](https://aerokube.com/moon/)** *(Aerokube)* | **Micro-Enterprise** (<€1M Revenue) | **$5/mo** per parallel session | **Free Tier**: Up to 3 concurrent parallel browser sessions with basic browser pools | Cloud-managed Kubernetes browser orchestration cluster supporting Selenium, Playwright, Puppeteer, and Cypress with per-second billing economics. |
+| **[Gridlastic](https://www.gridlastic.com/)** | **Micro-Enterprise** (Privately bootstrapped) | **$795/mo** (Professional Plan, up to 25 parallel nodes) | **Free Account Plan**: 5 free grid starts, up to 2 parallel nodes, maximum 2 hours run-time per grid start | Dedicated auto-scaling Selenium Grid infrastructure running on AWS with spot instance integration, 24/7 standalone hub, and encrypted Gridlastic Connect tunnels. |
+
+---
+
+## 💻 Open-Source Hub Projects & Infrastructure
+
+Self-hosted and Kubernetes-native Selenium Grid hubs offer complete data privacy, zero vendor lock-in, and predictable infrastructure costs.
+
+> [!TIP]
+> Repositories are ranked in descending order by GitHub star count. Each star badge links directly to that repository's stargazers page.
+
+| Project & Repo | Stars | Architecture & Runtime | Description & Primary Use Case |
+| :--- | :---: | :--- | :--- |
+| **[SeleniumHQ / selenium](https://github.com/SeleniumHQ/selenium)** | [![GitHub stars](https://img.shields.io/github/stars/SeleniumHQ/selenium?style=social&color=white)](https://github.com/SeleniumHQ/selenium/stargazers) | Java / Distributed Grid | **The official W3C WebDriver reference implementation**. Selenium Grid 4 features a fully modular hub-and-node architecture (Router, Distributor, Session Map, Event Bus, Session Queue, Node). Includes Relay feature to seamlessly proxy Appium and cloud mobile drivers. |
+| **[Appium / appium](https://github.com/appium/appium)** | [![GitHub stars](https://img.shields.io/github/stars/appium/appium?style=social&color=white)](https://github.com/appium/appium/stargazers) | Node.js / Mobile Protocol | Open-source ecosystem for cross-platform mobile automation. Integrates natively with Selenium Grid 4 through the Grid Relay node, enabling unified web and mobile automation routing under one central hub. |
+| **[Browserless / browserless](https://github.com/browserless/browserless)** | [![GitHub stars](https://img.shields.io/github/stars/browserless/browserless?style=social&color=white)](https://github.com/browserless/browserless/stargazers) | Node.js / Docker / Puppeteer / Playwright | High-performance, headless browser orchestration cluster. Acts as a drop-in remote proxy and centralized hub for Chrome, WebDriver, Playwright, and Puppeteer sessions with live session debugger, queue management, and resource concurrency controls. |
+| **[SeleniumHQ / docker-selenium](https://github.com/SeleniumHQ/docker-selenium)** | [![GitHub stars](https://img.shields.io/github/stars/SeleniumHQ/docker-selenium?style=social&color=white)](https://github.com/SeleniumHQ/docker-selenium/stargazers) | Docker / Compose / Helm | Official containerized Docker images and Docker-Compose/Helm deployment definitions for Selenium Grid 4 standalone, hub, and browser nodes (Chrome, Firefox, Edge) with integrated noVNC live viewing and video recording sidecars. |
+| **[DeviceFarmer / stf](https://github.com/devicefarmer/stf)** | [![GitHub stars](https://img.shields.io/github/stars/devicefarmer/stf?style=social&color=white)](https://github.com/devicefarmer/stf/stargazers) | Node.js / RethinkDB | Smartphone Test Farm (STF). Active community continuation of OpenSTF for controlling and managing Android device hardware pools from a centralized browser console, REST API, and remote ADB connector. |
+| **[Aerokube / selenoid](https://github.com/aerokube/selenoid)** | [![GitHub stars](https://img.shields.io/github/stars/aerokube/selenoid?style=social&color=white)](https://github.com/aerokube/selenoid/stargazers) | Go / Docker / Ephemeral | Pioneering Go-based lightweight Selenium hub that spawns browsers inside ephemeral Docker containers per session. *(Archived in Dec 2024; production teams migrate to WebSummoner or Moon).* |
+| **[Zalando / zalenium](https://github.com/zalando/zalenium)** | [![GitHub stars](https://img.shields.io/github/stars/zalando/zalenium?style=social&color=white)](https://github.com/zalando/zalenium/stargazers) | Docker / Kubernetes | Flexible and auto-scalable containerized Selenium Grid with video recording, live preview, and on-demand cloud scaling fallback. *(Archived legacy solution; retained for reference).* |
+| **[elgalu / docker-selenium](https://github.com/elgalu/docker-selenium)** | [![GitHub stars](https://img.shields.io/github/stars/elgalu/docker-selenium?style=social&color=white)](https://github.com/elgalu/docker-selenium/stargazers) | Docker / Bash | Popular all-in-one standalone Selenium Grid Docker solution with Xvfb, VNC, video recording, and audio recording capabilities. |
+| **[Aerokube / ggr](https://github.com/aerokube/ggr)** | [![GitHub stars](https://img.shields.io/github/stars/aerokube/ggr?style=social&color=white)](https://github.com/aerokube/ggr/stargazers) | Go / Reverse Proxy | Go Grid Router: Lightweight reverse proxy that routes incoming Selenium WebDriver traffic across multiple independent Selenoid or Selenium Grid clusters according to client XML quotas. |
+| **[Aerokube / moon](https://github.com/aerokube/moon)** | [![GitHub stars](https://img.shields.io/github/stars/aerokube/moon?style=social&color=white)](https://github.com/aerokube/moon/stargazers) | Go / Kubernetes Native | Enterprise-ready Kubernetes browser automation platform. Schedules dynamic browser pods for Selenium, Playwright, and Cypress on demand with low latency (~3s cold start) and minimal idle consumption. |
+| **[Aerokube / cm](https://github.com/aerokube/cm)** | [![GitHub stars](https://img.shields.io/github/stars/aerokube/cm?style=social&color=white)](https://github.com/aerokube/cm/stargazers) | Go / CLI Utility | Configuration Manager for Selenoid and Moon. Automated CLI tool to download, configure, and initialize browser containers, drivers, and license keys with a single command. |
+| **[WebSummoner / websummoner](https://github.com/WebSummoner/websummoner)** | [![GitHub stars](https://img.shields.io/github/stars/WebSummoner/websummoner?style=social&color=white)](https://github.com/WebSummoner/websummoner/stargazers) | Go / Ephemeral Containers | Modern, actively maintained Go replacement for archived Selenoid. Spawns isolated ephemeral browser containers per session with video recording, live screen viewing, and backward-compatible `selenoid:options`. |
+
+---
+
+## 🛠️ Architectural Comparison: SaaS vs. Self-Hosted
+
+| Feature Dimension | Cloud SaaS (BrowserStack, Sauce Labs, LambdaTest) | Self-Hosted Open-Source (Grid 4, Moon, Docker-Selenium) |
+| :--- | :--- | :--- |
+| **Deployment Effort** | 🟢 Zero setup: Instant connection via authentication URL | 🟡 Medium to High: Requires Docker Compose or Kubernetes cluster |
+| **Infrastructure Maintenance** | 🟢 Fully managed OS, patches, browser updates, and real devices | 🔴 Team is responsible for VM scaling, browser image builds, and memory limits |
+| **Data Privacy & Security** | 🟡 Test traffic leaves internal VPC (requires local tunnel client) | 🟢 Maximum security: Runs entirely air-gapped within internal VPC/network |
+| **Cost Scaling Model** | 🔴 Expensive per parallel session / user subscription | 🟢 Fixed infrastructure cost (cloud VM / compute bill only) |
+| **Real Device Access** | 🟢 Immediate access to thousands of physical iOS and Android phones | 🔴 Complex physical USB hubs (STF) or emulators required |
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome to keep this directory up-to-date and comprehensive! 🚀
+
+1. 🍴 **Fork the repository** on GitHub.
+2. 🌿 **Create a new branch** for your updates (`git checkout -b add-grid-tool`).
+3. 📝 **Edit `README.md`** following the established tabular format and guidelines:
+   - For SaaS tools: include exact starting pricing and exact free tier/trial limits.
+   - For Open-Source tools: include official repo, star badge with white social style, and architectural summary.
+4. 🚀 **Submit a Pull Request** with a concise summary of the changes.
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Centralized-Selenium-Grid-Hub&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Centralized-Selenium-Grid-Hub&type=date&legend=top-left)
+
+---
+
+## ⚠️ Disclaimer
+
+- This list is a **community-curated index** compiled for informational and educational purposes only.
+- Centralized Selenium Grids allow arbitrary execution of browser commands. Ensure self-hosted hubs implement authentication (basic auth/tokens), strict VPC isolation, and automatic session cleanup timeouts to protect against resource exhaustion or malicious activity.
+- Archived projects (e.g., Selenoid, Zalenium) are documented for migration planning and should not be deployed in new production setups.
+
+---
+
+<div align="center">
+
+**Built with ❤️ for QA Engineers, SDETs, and Infrastructure Architects building resilient test automation pipelines.**
+
+</div>
