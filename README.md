@@ -46,6 +46,7 @@ Whether you run on-demand cloud infrastructure or manage self-hosted containeriz
 - [💻 Open-Source Hub Projects & Infrastructure](#-open-source-hub-projects--infrastructure)
 - [🛠️ Architectural Comparison: SaaS vs. Self-Hosted](#️-architectural-comparison-saas-vs-self-hosted)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
 - [📈 Star History](#-star-history)
 - [⚠️ Disclaimer](#️-disclaimer)
 
@@ -115,6 +116,29 @@ Contributions are welcome to keep this directory up-to-date and comprehensive! �
    - For SaaS tools: include exact starting pricing and exact free tier/trial limits.
    - For Open-Source tools: include official repo, star badge with white social style, and architectural summary.
 4. 🚀 **Submit a Pull Request** with a concise summary of the changes.
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you so much for taking the time to explore and use this project! Maintaining curated developer resources, benchmarks, and architectural documentation takes continuous effort. If you find this repository valuable for your test automation work, CI/CD pipelines, or team infrastructure, here is how you can show your support:
+
+- ⭐ **Star this repository** on GitHub to help others discover it.
+- 🍴 **Fork the repo** and contribute additions, corrections, or tools.
+- 📢 **Share it** with fellow QA engineers, SDETs, and DevOps communities on LinkedIn, X/Twitter, or Reddit.
+- ☕ **Buy me a coffee / Sponsor the project**: Support ongoing maintenance directly via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+<div align="center">
+
+<a href="https://github.com/sponsors/ishandutta2007">
+  <img src="https://img.shields.io/badge/Sponsor%20me-%E2%9D%A4-ea4aaa?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="Sponsor on GitHub" />
+</a>
+&nbsp;&nbsp;
+<a href="https://github.com/sponsors/ishandutta2007">
+  <img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" />
+</a>
+
+</div>
 
 ---
 
